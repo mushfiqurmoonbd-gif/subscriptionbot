@@ -1,0 +1,79 @@
+SUBSCRIPTION BOT - COMPLETE FILE LIST
+=====================================
+
+CORE APPLICATION FILES:
+-----------------------
+app.py
+config.py
+models.py
+telegram_bot.py
+bot.py
+admin_routes.py
+admin_cli.py
+
+PAYMENT INTEGRATION:
+-------------------
+subscription_manager.py
+paypal_manager.py
+crypto_manager.py
+
+SMS/MMS FUNCTIONALITY:
+---------------------
+sms_sender.py
+email_sms_gateways.py
+scheduler.py
+group_message_scheduler.py
+
+SUBSCRIPTION MANAGEMENT:
+-----------------------
+plan_manager.py
+delivery_messages.py
+
+DATABASE:
+--------
+models.py
+init_database.py
+migrate_database.py
+clear_database.py
+
+UTILITY SCRIPTS:
+---------------
+check_setup.py
+fix_bot_conflict.py
+example_usage.py
+manage_groups.py
+
+SMS TESTING:
+-----------
+send_bd_sms.py
+send_bd_sms_twilio.py
+quick_send_bd.py
+
+CONFIGURATION FILES:
+-------------------
+requirements.txt
+runtime.txt
+Procfile
+railway.json
+
+DOCUMENTATION:
+-------------
+README.md
+HOW_IT_WORKS.md
+USER_GUIDE.md
+ADMIN_CLI.md
+RAILWAY_DEPLOY.md
+RUN_INSTRUCTIONS.md
+NEW_FEATURES.md
+TIMEZONE_MATCHING_GUIDE.md
+PRICING_SYSTEM_SUMMARY.md
+GMAIL_SMTP_FIX.md
+
+DIRECTORIES:
+-----------
+instance/ (database)
+__pycache__/ (Python cache)
+uploads/ (images - created at runtime)
+
+TOTAL: 40+ files
+

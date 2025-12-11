@@ -1,0 +1,17 @@
+flask==3.0.0
+flask-sqlalchemy==3.1.1
+flask-cors==4.0.0
+stripe==7.8.0
+paypalrestsdk==1.13.3
+coinbase-commerce==1.0.1
+apscheduler==3.10.4
+python-dotenv==1.0.0
+email-validator==2.1.0
+requests==2.31.0
+werkzeug==3.0.1
+python-telegram-bot==20.7
+twilio==8.10.0
+psycopg2-binary==2.9.9  # PostgreSQL adapter for Railway
+tabulate==0.9.0  # For admin CLI table formatting
+# web3==6.11.3  # Optional - requires C compiler. Uncomment if needed for advanced crypto features
+
