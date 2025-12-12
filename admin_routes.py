@@ -2044,8 +2044,18 @@ def create_plan():
         data = request.get_json()
         
         # Validate required fields
-        if not data.get('name') or not data.get('price'):
-            return jsonify({'error': 'Name and price are required'}), 400
+        name = data.get('name')
+        price = data.get('price')
+        if not name:
+            return jsonify({'error': 'Name is required'}), 400
+        if price is None:
+            # allow zero price (free/trial plans) so only None is treated as missing
+            return jsonify({'error': 'Price is required'}), 400
+        # Ensure price is numeric
+        try:
+            price = float(price)
+        except (TypeError, ValueError):
+            return jsonify({'error': 'Price must be a number'}), 400
         
         # Check if plan name already exists
         existing = SubscriptionPlan.query.filter_by(name=data['name']).first()
@@ -2053,9 +2063,9 @@ def create_plan():
             return jsonify({'error': f"Plan with name '{data['name']}' already exists"}), 400
         
         plan = SubscriptionPlan(
-            name=data['name'],
+            name=name,
             description=data.get('description'),
-            price=data['price'],
+            price=price,
             currency=data.get('currency', 'USD'),
             has_trial=data.get('trial_days', 0) > 0,
             trial_days=data.get('trial_days', 0),
